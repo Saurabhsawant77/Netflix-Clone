@@ -1,12 +1,22 @@
-<<<<<<< HEAD
-# Netflix-Clone
-=======
-# React + Vite
+# Netflix Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Netflix clone built with React. It features a responsive UI and includes functionalities similar to the original Netflix platform.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
->>>>>>> Initial commit
+- Browse through movies and TV shows
+- Responsive design
+- Slider functionality for showcasing content
+
+## Installation
+
+To get started with the project, you'll need to clone the repository and install the necessary dependencies. Run the following commands in your terminal:
+
+### Clone the Repository
+
+  ```bash
+  git clone https://github.com/Saurabhsawant77/Netflix-Clone.git
+  cd Netflix-Clone
+
+  npm install react-slick --save
+  npm install slick-carousel --save
