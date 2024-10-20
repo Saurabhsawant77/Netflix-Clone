@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import Footer from './home/smallComponent/Footer';
 
 const SignUpPage = () => {
   const { searchParams } = new URL(document.location);
@@ -13,17 +14,20 @@ const SignUpPage = () => {
   const handleSignup = (e) => {
     e.preventDefault();
     console.log(email,username,password);
-    navigate("/login?email=" + email);
+    navigate("/signup/registration?email=" + email);
   } 
 
   return (
-    <div className="h-screen w-full hero-bg">
+    <div className="h-screen w-full bg-white">
       <header className="max-w-6xl mx-auto flex items-center justify-between p-4">
         <Link to={'/'}>
           <img src="/netflix-logo.png" alt="" className="w-52" />
         </Link>
+        <Link to={'/login'}>
+        <p className="text-black text-xl">Sign in</p>
+        </Link>
       </header>
-
+        <hr />
       <div className="flex justify-center items-center mt-20 mx-3">
         <div className="w-full max-w-md p-8 space-y-6 bg-black/60 rounded-lg shadow-md">
           <h1 className="text-center text-white text-2xl font-bold mb-4">
@@ -78,6 +82,9 @@ const SignUpPage = () => {
             <Link to={"/login"} className="text-red-500 hover:underline m-1">Sign in</Link>
           </div>
         </div>
+      </div>
+      <div className="bg-white w-full">
+        <Footer />
       </div>
     </div>
   )

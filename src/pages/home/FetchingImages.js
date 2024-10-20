@@ -32,3 +32,5 @@ const imgHome = [
 ];
 
 export default imgHome;
+
+

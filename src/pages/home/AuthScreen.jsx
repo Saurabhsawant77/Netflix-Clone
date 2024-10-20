@@ -126,8 +126,9 @@ const AuthScreen = () => {
 					</button>
 				</form>
 			</div>
-
-			<Footer />
+			<div className="bg-black w-full text-white">
+				<Footer />
+			</div>
 		</div>
 	);
 };

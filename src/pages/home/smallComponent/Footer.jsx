@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 
 const Footer = () => {
+    const [selectedLanguage,setSelectedLanguage] = useState('English')
   return (
-    <footer className="bg-black text-white py-8">
+    <footer className=" py-8">
       {/* Container for all content */}
       <div className="container mx-auto text-center sm:text-left">
         {/* Support Contact */}
@@ -117,12 +118,10 @@ const Footer = () => {
 
         {/* Language selection and footer bottom */}
         <div className="mt-6">
-          <button className="border border-gray-400 px-4 py-2 rounded-md text-sm hover:bg-gray-700">
-            <span role="img" aria-label="Language">
-              🌐
-            </span>{" "}
-            English
-          </button>
+        <select name="select" id="select" className="p-2 rounded flex-1 bg-black/80 border border-gray-700 text-white m-2 px-1">
+						<option value="English" defaultValue={selectedLanguage}>English</option>
+						<option value="Hindi">Hindi</option>
+		</select>
         </div>
 
         <div className="mt-6 text-sm">
