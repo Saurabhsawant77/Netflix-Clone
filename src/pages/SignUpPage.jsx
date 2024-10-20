@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Footer from './home/smallComponent/Footer';
+// import { useAuthStore } from '../store/authUser';
 
 const SignUpPage = () => {
   const { searchParams } = new URL(document.location);
@@ -9,6 +10,10 @@ const SignUpPage = () => {
 	const [email, setEmail] = useState(emailValue || "");
   const [username,setUsername] = useState("");
   const [password,setPassword] = useState("");
+  
+  // const {signup} = useAuthStore();
+
+
   const navigate = useNavigate();
 
   const handleSignup = (e) => {
