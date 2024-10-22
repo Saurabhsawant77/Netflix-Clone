@@ -24,7 +24,7 @@ const LoginPage = () => {
     else{
       if(password === '1234567890'){
         console.log(password);
-        navigate('/');
+        navigate('/home');
       }
       else{
         alert("wrong username or password");
