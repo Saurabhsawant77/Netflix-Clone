@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const LoginPage = () => {
   const { searchParams } = new URL(document.location);
@@ -7,11 +7,32 @@ const LoginPage = () => {
 	const [email, setEmail] = useState(emailValue || "");
   // const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
     console.log(email,password);
   } 
+
+  const handleLoginHomeScreen = (e) =>{
+    e.preventDefault();
+    console.log(password + "saurabhsawant");
+    if(password.length<=6){
+      alert("Password Characters must be greater than 6");
+      return;
+    }
+    else{
+      if(password === '1234567890'){
+        console.log(password);
+        navigate('/');
+      }
+      else{
+        alert("wrong username or password");
+        return;
+      }
+    }
+    
+  }
   return (
     <div className="h-screen w-full hero-bg">
       <header className="max-w-6xl mx-auto flex items-center justify-between p-4">
@@ -50,7 +71,7 @@ const LoginPage = () => {
               />
             </div>
 
-            <button className="w-full py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700"> Login </button>
+            <button className="w-full py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700" onClick={handleLoginHomeScreen}> Login </button>
           </form>
 
           <div className="text-center text-gray-400">

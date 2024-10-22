@@ -23,7 +23,7 @@ const Modal = ({ isOpen, onClose, imageUrl }) => {
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
       <div className="bg-gray-900 text-white rounded-lg shadow-lg w-[90%] max-w-md p-0 relative border border-white ">
         
-        {/* Close button with increased z-index */}
+        
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-white border border-white text-xl ease-in rounded-full  hover:bg-gray-300 px-2 pb-1  z-50"

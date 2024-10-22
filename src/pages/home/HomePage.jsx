@@ -2,7 +2,7 @@ import HomeScreen from "./HomeScreen";
 import AuthScreen from "./AuthScreen"
 
 const HomePage = () => {
-  const user = false;
+  const user = true;
   return (
     <>{user ? <HomeScreen/> : <AuthScreen/>}</>
   )

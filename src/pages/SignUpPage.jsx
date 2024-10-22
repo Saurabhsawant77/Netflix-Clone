@@ -19,6 +19,10 @@ const SignUpPage = () => {
   const handleSignup = (e) => {
     e.preventDefault();
     console.log(email,username,password);
+    if(!email && !password &&  !username){
+      alert("please enter all details");
+      return ;
+    }
     navigate("/signup/registration?email=" + email);
   } 
 
@@ -34,7 +38,7 @@ const SignUpPage = () => {
       </header>
         <hr />
       <div className="flex justify-center items-center mt-20 mx-3">
-        <div className="w-full max-w-md p-8 space-y-6 bg-black/60 rounded-lg shadow-md">
+        <div className="w-full max-w-md p-8 space-y-6 bg-black/50 rounded-lg shadow-md">
           <h1 className="text-center text-white text-2xl font-bold mb-4">
             Sign Up
           </h1>
@@ -79,7 +83,7 @@ const SignUpPage = () => {
               />
             </div>
 
-            <button className="w-full py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700"> Sign Up </button>
+            <button className="w-full py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700" > Sign Up </button>
           </form>
 
           <div className="text-center text-gray-400">
